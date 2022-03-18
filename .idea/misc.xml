@@ -3,8 +3,22 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/card_background.xml" value="0.321025641025641" />
+        <entry key="app/src/main/res/drawable/card_background_1.xml" value="0.321025641025641" />
+        <entry key="app/src/main/res/drawable/card_background_2.xml" value="0.321025641025641" />
+        <entry key="app/src/main/res/drawable/card_background_3.xml" value="0.321025641025641" />
+        <entry key="app/src/main/res/drawable/card_background_4.xml" value="0.321025641025641" />
+        <entry key="app/src/main/res/drawable/ic_ellipse_1.xml" value="0.321025641025641" />
+        <entry key="app/src/main/res/drawable/ic_line_12.xml" value="0.321025641025641" />
+        <entry key="app/src/main/res/drawable/ic_mask_group.xml" value="0.321025641025641" />
+        <entry key="app/src/main/res/drawable/ic_mask_group_1.xml" value="0.321025641025641" />
+        <entry key="app/src/main/res/drawable/ic_spot_1.xml" value="0.18385416666666668" />
+        <entry key="app/src/main/res/drawable/ic_spot_2.xml" value="0.18385416666666668" />
+        <entry key="app/src/main/res/drawable/ic_spot_3.xml" value="0.321025641025641" />
+        <entry key="app/src/main/res/drawable/ic_spot_4.xml" value="0.18385416666666668" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.29583333333333334" />
-        <entry key="app/src/main/res/layout/fragment_category.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/category_item.xml" value="0.2485322081891001" />
+        <entry key="app/src/main/res/layout/fragment_category.xml" value="0.22705658664820955" />
         <entry key="app/src/main/res/layout/fragment_questions.xml" value="0.3098958333333333" />
       </map>
     </option>

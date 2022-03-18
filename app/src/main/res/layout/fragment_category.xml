@@ -6,23 +6,47 @@
     <data>
         <variable
             name="fragment"
-            type="com.example.quizapp.CategoryFragment" />
+            type="com.example.quizapp.ui.fragments.CategoryFragment" />
+        <variable
+            name="viewModel"
+            type="com.example.quizapp.ui.viewmodels.CategoryViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".CategoryFragment">
+        android:background="@color/pink"
+        tools:context=".ui.fragments.CategoryFragment">
 
-        <Button
-            android:id="@+id/button"
-            android:onClick="@{() -> fragment.navigateNext()}"
+        <TextView
+            android:id="@+id/categories_title"
+            style="@style/Widget.AppCompat.TextView.Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="@string/categories"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/category_list"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:padding="10dp"
+            tools:itemCount="6"
+            tools:listitem="@layout/category_item"
+            app:spanCount="2"
+            android:clipToPadding="false"
+            category_list="@{viewModel.categories}"
+            app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/categories_title" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -1,4 +1,4 @@
-package com.example.quizapp
+package com.example.quizapp.ui.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

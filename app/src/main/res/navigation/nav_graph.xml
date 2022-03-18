@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/categoryFragment"
-        android:name="com.example.quizapp.CategoryFragment"
+        android:name="com.example.quizapp.ui.fragments.CategoryFragment"
         android:label="CategoryFragment" >
         <action
             android:id="@+id/action_categoryFragment_to_questionsFragment"
@@ -14,6 +14,6 @@
     </fragment>
     <fragment
         android:id="@+id/questionsFragment"
-        android:name="com.example.quizapp.QuestionsFragment"
+        android:name="com.example.quizapp.ui.fragments.QuestionsFragment"
         android:label="QuestionsFragment" />
 </navigation>
