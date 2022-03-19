@@ -18,5 +18,6 @@
     <color name="chestnut">#A24936</color>
     <color name="lavender">#C6D4FF</color>
     <color name="pink">#FCE4D8</color>
+    <color name="pinkLight">#FEF2EC</color>
     <color name="grey">#073B4C</color>
 </resources>

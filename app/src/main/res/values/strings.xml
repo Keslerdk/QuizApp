@@ -10,4 +10,8 @@
     <string name="wrong">Wrong</string>
     <string name="wrong_text">Try better next time. The right answer is %s</string>
     <string name="next_question">Next Question</string>
+    <string name="finish_quiz">Finish Quiz</string>
+    <string name="score">Your score</string>
+    <string name="congratulations">Wonderful result! Keep up the good work!</string>
+    <string name="play_again">Play Again</string>
 </resources>

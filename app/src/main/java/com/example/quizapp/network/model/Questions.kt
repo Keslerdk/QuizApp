@@ -7,9 +7,9 @@ data class Questions(
 
 data class Result(
     val category: String,
-    var correct_answer: String,
+    val correct_answer: String,
     val difficulty: String,
     val incorrect_answers: List<String>,
-    var question: String,
+    val question: String,
     val type: String
 )

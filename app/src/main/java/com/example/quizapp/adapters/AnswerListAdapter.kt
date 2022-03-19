@@ -58,4 +58,9 @@ class AnswerListAdapter(private val onClick: (String) -> Unit) :
         notifyItemChanged(lastSelectedIndex)
     }
 
+    fun resetSelectedIndex() {
+        selectedIndex = -1
+        lastSelectedIndex = -1
+    }
+
 }
