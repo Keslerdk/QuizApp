@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.quizapp.databinding.AnswerItemBinding
 
-class AnswerListAdapter :
+class AnswerListAdapter(private val onClick: (String) -> Unit) :
     ListAdapter<String, AnswerListAdapter.AnswerListViewHolder>(DiffCallback) {
 
     private var selectedIndex = -1
@@ -21,7 +21,7 @@ class AnswerListAdapter :
                 binding.layout.isSelected = position==selectedIndex
 
                 binding.answerCard.setOnClickListener {
-                    onClick(position)
+                    onCardClick(position, text)
                 }
             }
 
@@ -48,7 +48,9 @@ class AnswerListAdapter :
 
     }
 
-    private fun onClick(position: Int) {
+    private fun onCardClick(position: Int, str: String) {
+        onClick(str)
+
         lastSelectedIndex = selectedIndex
         selectedIndex = position
 

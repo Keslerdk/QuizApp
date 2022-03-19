@@ -4,4 +4,10 @@
     <string name="categories">Categories</string>
     <string name="check">Check</string>
     <string name="question_num">%d/5</string>
+
+    <string name="right">Right</string>
+    <string name="right_text">You are awesome!</string>
+    <string name="wrong">Wrong</string>
+    <string name="wrong_text">Try better next time. The right answer is %s</string>
+    <string name="next_question">Next Question</string>
 </resources>

@@ -4,10 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="viewModel"
             type="com.example.quizapp.ui.viewmodels.QuestionsViewModel" />
+
+        <variable
+            name="fragment"
+            type="com.example.quizapp.ui.fragments.QuestionsFragment" />
     </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -20,9 +29,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:textSize="18sp"
-            android:textColor="@color/grey"
             android:fontFamily="@font/lato"
+            android:textColor="@color/grey"
+            android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -44,29 +53,36 @@
             tools:text="What's your favourite color, boy?" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:padding="10dp"
             android:id="@+id/answer_list"
-            android:clipToPadding="false"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             android:layout_width="match_parent"
-            tools:itemCount="3"
-            app:layout_constraintVertical_bias="0"
             android:layout_height="wrap_content"
-            tools:listitem="@layout/answer_item"
+            android:clipToPadding="false"
+            android:padding="10dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/question_text" />
+            app:layout_constraintTop_toBottomOf="@+id/question_text"
+            app:layout_constraintVertical_bias="0"
+            tools:itemCount="3"
+            tools:listitem="@layout/answer_item" />
 
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textColor="@color/pink"
-            android:text="@string/check"
+            android:layout_marginBottom="20dp"
             android:background="@drawable/button_shape"
-            app:layout_constraintWidth_percent=".4"
+            android:text="@string/check"
+            android:onClick="@{() -> fragment.checkTheAnswer()}"
+            android:textColor="@color/pink"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginBottom="20dp"/>
+            app:layout_constraintWidth_percent=".4" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include
+        android:id="@+id/included"
+        layout="@layout/bottom_sheet" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>

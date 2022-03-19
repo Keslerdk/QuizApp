@@ -19,11 +19,14 @@ class QuestionsViewModel(
     private var _currentQuestionNum = MutableLiveData<Int>()
     val currentQuestionNum get() = _currentQuestionNum
 
-    val currentQuestion: Result? get() {
-        currentQuestionNum.value?.let {
-            return questionList.value!![it]
-        } ?: return null
-    }
+    val currentQuestion: Result?
+        get() {
+            currentQuestionNum.value?.let {
+                return questionList.value!![it]
+            } ?: return null
+        }
+
+    private var _chosenAnswer = ""
 
 
     init {
@@ -37,6 +40,7 @@ class QuestionsViewModel(
                     QuizApi.retrofitService.getQuestionsList(categoryId = categoryId).results
 
                 _currentQuestionNum.value = 0
+                parseResult()
                 Log.d(TAG, "getQuestionsList: ${questionList.value}")
 
             } catch (e: Exception) {
@@ -46,13 +50,12 @@ class QuestionsViewModel(
         }
     }
 
-    fun setQuestion() : String {
-        return convertFromHtml(currentQuestion!!.question)
-    }
-
-    fun setAnswers(): List<String> {
+    /**
+     * return scrambled list af answers
+     */
+    fun getAnswers(): List<String> {
         currentQuestion?.let {
-            val answers = it.incorrect_answers.map { elem -> convertFromHtml(elem) }.toMutableList()
+            val answers = it.incorrect_answers.toMutableList()
             answers.add(convertFromHtml(it.correct_answer))
             answers.shuffle()
 
@@ -60,6 +63,31 @@ class QuestionsViewModel(
 
             return answers
         } ?: return listOf()
+    }
+
+    fun setChosenAnswer(str: String) {
+        _chosenAnswer = str
+    }
+
+    fun isAnswerRight(): Boolean {
+        if (currentQuestion?.correct_answer.equals(_chosenAnswer)) {
+            _chosenAnswer = ""
+            return true
+        }
+        return false
+    }
+
+    /**
+     * convert from html code to plain text
+     * and rewrite some properties
+     */
+    private fun parseResult() {
+        currentQuestion?.let {
+            it.correct_answer = convertFromHtml(it.correct_answer)
+            it.question = convertFromHtml(it.question)
+            it.incorrect_answers.map { elem -> convertFromHtml(elem)  }.toList()
+        }
+        currentQuestion!!.correct_answer = convertFromHtml(currentQuestion!!.correct_answer)
     }
 
     private fun convertFromHtml(str: String): String {
