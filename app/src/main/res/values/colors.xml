@@ -9,7 +9,9 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="green">#83BCA9</color>
+    <color name="greenLight">#A3CCBF</color>
     <color name="greenDark">#0E9594</color>
+
     <color name="asBlack">#282B28</color>
     <color name="flame">#D36135</color>
     <color name="flameDarker">#974221</color>

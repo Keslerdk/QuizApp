@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/answer_background.xml" value="0.321025641025641" />
+        <entry key="app/src/main/res/drawable/button_shape.xml" value="0.321025641025641" />
         <entry key="app/src/main/res/drawable/card_background.xml" value="0.321025641025641" />
         <entry key="app/src/main/res/drawable/card_background_1.xml" value="0.321025641025641" />
         <entry key="app/src/main/res/drawable/card_background_2.xml" value="0.321025641025641" />

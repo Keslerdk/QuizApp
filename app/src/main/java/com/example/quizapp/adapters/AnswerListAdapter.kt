@@ -5,28 +5,36 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.quizapp.databinding.QuestionItemBinding
+import com.example.quizapp.databinding.AnswerItemBinding
 
 class AnswerListAdapter :
     ListAdapter<String, AnswerListAdapter.AnswerListViewHolder>(DiffCallback) {
 
-    inner class AnswerListViewHolder(private val binding: QuestionItemBinding) :
+    private var selectedIndex = -1
+    private var lastSelectedIndex = -1
+
+    inner class AnswerListViewHolder(private val binding: AnswerItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-            fun bind(text: String) {
+            fun bind(text: String, position: Int) {
                 binding.answerText.text = text
+                binding.layout.isSelected = position==selectedIndex
+
+                binding.answerCard.setOnClickListener {
+                    onClick(position)
+                }
             }
 
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AnswerListViewHolder {
         val binding =
-            QuestionItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            AnswerItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return AnswerListViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: AnswerListViewHolder, position: Int) {
-        holder.bind(getItem(position))
+        holder.bind(getItem(position), position)
     }
 
     object DiffCallback : DiffUtil.ItemCallback<String>() {
@@ -38,6 +46,14 @@ class AnswerListAdapter :
             return oldItem == newItem
         }
 
+    }
+
+    private fun onClick(position: Int) {
+        lastSelectedIndex = selectedIndex
+        selectedIndex = position
+
+        notifyItemChanged(position)
+        notifyItemChanged(lastSelectedIndex)
     }
 
 }

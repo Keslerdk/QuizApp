@@ -10,21 +10,21 @@ import com.example.quizapp.databinding.CategoryItemBinding
 import com.example.quizapp.network.model.TriviaCategory
 import kotlin.random.Random
 
-class CategoryListAdapter(private val onCardClick : (Int) -> Unit ) :
+class CategoryListAdapter(private val onCardClick: (Int, String) -> Unit) :
     ListAdapter<TriviaCategory, CategoryListAdapter.CategoryViewHolder>(DiffCallback) {
 
     inner class CategoryViewHolder(private val binding: CategoryItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(id: Int, text: String) {
-
+            var name = text
             if (text.contains(":")) {
-                binding.categoryName.text = text.split(":").last().substring(1)
-            } else {
-                binding.categoryName.text = text
+                name = text.split(":").last().substring(1)
             }
+            binding.categoryName.text = name
+
 
             binding.layout.apply {
-                when(Random.nextInt(1, 5)) {
+                when (Random.nextInt(1, 5)) {
                     1 -> setBackgroundResource(R.drawable.card_background_1)
                     2 -> setBackgroundResource(R.drawable.card_background_2)
                     3 -> setBackgroundResource(R.drawable.card_background_3)
@@ -33,7 +33,7 @@ class CategoryListAdapter(private val onCardClick : (Int) -> Unit ) :
             }
 
             binding.card.setOnClickListener {
-                onCardClick(id)
+                onCardClick(id, name)
             }
         }
     }

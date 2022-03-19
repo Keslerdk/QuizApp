@@ -27,10 +27,9 @@ class CategoryFragment : Fragment() {
     ): View {
         _binding = FragmentCategoryBinding.inflate(inflater, container, false)
 
-        binding.apply {
-            lifecycleOwner = this@CategoryFragment
-            viewModel = this@CategoryFragment.viewModel
-        }
+        binding.lifecycleOwner = this
+        binding.viewModel = viewModel
+
         return binding.root
     }
 
@@ -40,13 +39,16 @@ class CategoryFragment : Fragment() {
         (requireActivity() as AppCompatActivity).supportActionBar?.title =
             getString(R.string.categories)
 
-        val adapter = CategoryListAdapter { id -> navigateToDetails(id) }
+        val adapter = CategoryListAdapter { id, name -> navigateToDetails(id, name) }
         binding.categoryList.adapter = adapter
 
     }
 
-    private fun navigateToDetails(categoryId: Int) {
-        val action = CategoryFragmentDirections.actionCategoryFragmentToQuestionsFragment(categoryId)
+    private fun navigateToDetails(categoryId: Int, categoryName: String) {
+        val action = CategoryFragmentDirections.actionCategoryFragmentToQuestionsFragment(
+            categoryId = categoryId,
+            categoryName = categoryName,
+        )
         findNavController().navigate(action)
     }
 

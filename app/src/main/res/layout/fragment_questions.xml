@@ -16,6 +16,19 @@
         tools:context=".ui.fragments.QuestionsFragment">
 
         <TextView
+            android:id="@+id/question_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"
+            android:textColor="@color/grey"
+            android:fontFamily="@font/lato"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="3/5" />
+
+        <TextView
             android:id="@+id/question_text"
             style="@style/Widget.AppCompat.TextView.Title"
             android:layout_width="0dp"
@@ -27,7 +40,7 @@
             android:textColor="@color/grey"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/question_num"
             tools:text="What's your favourite color, boy?" />
 
         <androidx.recyclerview.widget.RecyclerView
@@ -36,10 +49,24 @@
             android:clipToPadding="false"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            tools:listitem="@layout/question_item"
+            tools:itemCount="3"
+            app:layout_constraintVertical_bias="0"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/answer_item"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/question_text" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/pink"
+            android:text="@string/check"
+            android:background="@drawable/button_shape"
+            app:layout_constraintWidth_percent=".4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="20dp"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

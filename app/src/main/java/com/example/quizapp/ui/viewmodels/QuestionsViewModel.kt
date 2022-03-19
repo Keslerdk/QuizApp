@@ -1,6 +1,8 @@
 package com.example.quizapp.ui.viewmodels
 
 import android.content.ContentValues.TAG
+import android.os.Build
+import android.text.Html
 import android.util.Log
 import androidx.lifecycle.*
 import com.example.quizapp.network.QuizApi
@@ -14,11 +16,15 @@ class QuestionsViewModel(
     private val _questionsList = MutableLiveData<List<Result>>()
     val questionList: LiveData<List<Result>> get() = _questionsList
 
-    private val _currentQuestion = MutableLiveData<Result>()
-    val currentQuestion: LiveData<Result> get() = _currentQuestion
+    private var _currentQuestionNum = MutableLiveData<Int>()
+    val currentQuestionNum get() = _currentQuestionNum
 
-    private var _correctAnswer: String? = null
-    val correctAnswer get() = _correctAnswer!!
+    val currentQuestion: Result? get() {
+        currentQuestionNum.value?.let {
+            return questionList.value!![it]
+        } ?: return null
+    }
+
 
     init {
         getQuestionsList()
@@ -30,9 +36,7 @@ class QuestionsViewModel(
                 _questionsList.value =
                     QuizApi.retrofitService.getQuestionsList(categoryId = categoryId).results
 
-                _currentQuestion.value = questionList.value?.get(0)
-                _correctAnswer = currentQuestion.value?.correct_answer
-
+                _currentQuestionNum.value = 0
                 Log.d(TAG, "getQuestionsList: ${questionList.value}")
 
             } catch (e: Exception) {
@@ -42,16 +46,28 @@ class QuestionsViewModel(
         }
     }
 
+    fun setQuestion() : String {
+        return convertFromHtml(currentQuestion!!.question)
+    }
+
     fun setAnswers(): List<String> {
-        currentQuestion.value?.let {
-            val answers = it.incorrect_answers.toMutableList()
-            answers.add(it.correct_answer)
+        currentQuestion?.let {
+            val answers = it.incorrect_answers.map { elem -> convertFromHtml(elem) }.toMutableList()
+            answers.add(convertFromHtml(it.correct_answer))
             answers.shuffle()
 
             Log.d(TAG, "setAnswers: $answers")
 
             return answers
         } ?: return listOf()
+    }
+
+    private fun convertFromHtml(str: String): String {
+        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            Html.fromHtml(str, Html.FROM_HTML_MODE_LEGACY).toString()
+        } else {
+            Html.fromHtml(str).toString()
+        }
     }
 }
 
