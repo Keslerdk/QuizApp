@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
@@ -17,7 +18,7 @@ class CategoryFragment : Fragment() {
     private var _binding: FragmentCategoryBinding? = null
     private val binding get() = _binding!!
 
-    private val viewModel : CategoryViewModel by viewModels()
+    private val viewModel: CategoryViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -27,25 +28,26 @@ class CategoryFragment : Fragment() {
         _binding = FragmentCategoryBinding.inflate(inflater, container, false)
 
         binding.apply {
-            fragment = this@CategoryFragment
             lifecycleOwner = this@CategoryFragment
+            viewModel = this@CategoryFragment.viewModel
         }
-
-        binding.viewModel = viewModel
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val adapter = CategoryListAdapter()
+        (requireActivity() as AppCompatActivity).supportActionBar?.title =
+            getString(R.string.categories)
+
+        val adapter = CategoryListAdapter { id -> navigateToDetails(id) }
         binding.categoryList.adapter = adapter
 
-        viewModel
     }
 
-    fun navigateNext() {
-        findNavController().navigate(R.id.action_categoryFragment_to_questionsFragment)
+    private fun navigateToDetails(categoryId: Int) {
+        val action = CategoryFragmentDirections.actionCategoryFragmentToQuestionsFragment(categoryId)
+        findNavController().navigate(action)
     }
 
 }

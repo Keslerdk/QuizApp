@@ -5,9 +5,6 @@
 
     <data>
         <variable
-            name="fragment"
-            type="com.example.quizapp.ui.fragments.CategoryFragment" />
-        <variable
             name="viewModel"
             type="com.example.quizapp.ui.viewmodels.CategoryViewModel" />
     </data>
@@ -18,35 +15,21 @@
         android:background="@color/pink"
         tools:context=".ui.fragments.CategoryFragment">
 
-        <TextView
-            android:id="@+id/categories_title"
-            style="@style/Widget.AppCompat.TextView.Title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:text="@string/categories"/>
-
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/category_list"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginTop="8dp"
-            android:padding="10dp"
-            tools:itemCount="6"
-            tools:listitem="@layout/category_item"
-            app:spanCount="2"
-            android:clipToPadding="false"
             category_list="@{viewModel.categories}"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:padding="10dp"
             app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/categories_title" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:spanCount="2"
+            tools:itemCount="6"
+            tools:listitem="@layout/category_item" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

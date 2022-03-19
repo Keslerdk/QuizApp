@@ -15,5 +15,10 @@
     <fragment
         android:id="@+id/questionsFragment"
         android:name="com.example.quizapp.ui.fragments.QuestionsFragment"
-        android:label="QuestionsFragment" />
+        android:label="QuestionsFragment" >
+        <argument
+            android:name="categoryId"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
 </navigation>

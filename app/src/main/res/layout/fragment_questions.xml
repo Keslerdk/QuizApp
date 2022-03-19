@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+        <variable
+            name="viewModel"
+            type="com.example.quizapp.ui.viewmodels.QuestionsViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -12,11 +15,31 @@
         android:background="@color/pink"
         tools:context=".ui.fragments.QuestionsFragment">
 
-        <!-- TODO: Update blank fragment layout -->
         <TextView
+            android:id="@+id/question_text"
+            style="@style/Widget.AppCompat.TextView.Title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="center"
+            android:textColor="@color/grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="What's your favourite color, boy?" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:padding="10dp"
+            android:id="@+id/answer_list"
+            android:clipToPadding="false"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/hello_blank_fragment" />
+            android:layout_height="0dp"
+            tools:listitem="@layout/question_item"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/question_text" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

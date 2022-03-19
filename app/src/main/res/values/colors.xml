@@ -12,7 +12,9 @@
     <color name="greenDark">#0E9594</color>
     <color name="asBlack">#282B28</color>
     <color name="flame">#D36135</color>
+    <color name="flameDarker">#974221</color>
     <color name="chestnut">#A24936</color>
     <color name="lavender">#C6D4FF</color>
     <color name="pink">#FCE4D8</color>
+    <color name="grey">#073B4C</color>
 </resources>

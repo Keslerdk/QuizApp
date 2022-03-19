@@ -8,6 +8,7 @@
     </data>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/card"
         android:layout_width="match_parent"
         android:layout_margin="8dp"
         android:layout_height="wrap_content"
@@ -24,7 +25,6 @@
                 android:id="@+id/category_name"
                 style="@style/Widget.AppCompat.TextView.Title"
                 android:layout_width="0dp"
-                android:textColor="@color/pink"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="50dp"
