@@ -1,5 +1,7 @@
 package com.example.quizapp
 
+import android.content.ContentValues.TAG
+import android.util.Log
 import android.view.View
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -15,6 +17,8 @@ fun bindCategoryList(recyclerView: RecyclerView, data: List<TriviaCategory>?) {
 
 @BindingAdapter("loading")
 fun bindLoading(shimmerFrameLayout: ShimmerFrameLayout, status: Status?) {
+    Log.d(TAG, "bindLoading: $status")
+
     if (status == Status.LOADING) {
         shimmerFrameLayout.visibility = View.VISIBLE
     } else {

@@ -1,10 +1,14 @@
 package com.example.quizapp.network.model
 
+import com.squareup.moshi.JsonClass
+
+@JsonClass(generateAdapter = true)
 data class Questions(
     val response_code: Int,
     val results: List<Result>
 )
 
+@JsonClass(generateAdapter = true)
 data class Result(
     val category: String,
     val correct_answer: String,

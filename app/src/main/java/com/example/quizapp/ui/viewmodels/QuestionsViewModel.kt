@@ -5,17 +5,26 @@ import android.os.Build
 import android.text.Html
 import android.util.Log
 import androidx.lifecycle.*
+import com.example.quizapp.network.model.Categories
+import com.example.quizapp.network.model.Questions
 import com.example.quizapp.network.model.Result
 import com.example.quizapp.repositories.MainRepo
+import com.squareup.moshi.JsonAdapter
+import com.squareup.moshi.Moshi
+import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import dagger.assisted.Assisted
 import dagger.assisted.AssistedFactory
 import dagger.assisted.AssistedInject
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 class QuestionsViewModel @AssistedInject constructor(
     @Assisted private val categoryId: Int,
     private val mainRepo: MainRepo
 ) : ViewModel() {
+
+    @Inject
+    lateinit var offlineQuestions: List<String>
 
     private val _questionsList = MutableLiveData<List<Result>>()
     private val questionList: LiveData<List<Result>> get() = _questionsList
@@ -56,6 +65,7 @@ class QuestionsViewModel @AssistedInject constructor(
 
             } catch (e: Exception) {
                 _status.value = Status.ERROR
+                parseOfflineData()
                 Log.d(TAG, "getQuestionsList: $e")
             }
 
@@ -105,6 +115,20 @@ class QuestionsViewModel @AssistedInject constructor(
         } else {
             Html.fromHtml(str).toString()
         }
+    }
+
+    private fun parseOfflineData() {
+        val moshi = Moshi.Builder()
+            .add(KotlinJsonAdapterFactory())
+            .build()
+        val jsonAdapter : JsonAdapter<Questions> = moshi.adapter(Questions::class.java)
+        when (categoryId) {
+            11 -> _questionsList.value = jsonAdapter.fromJson(offlineQuestions[0])?.results
+            10 -> _questionsList.value = jsonAdapter.fromJson(offlineQuestions[2])?.results
+            9 -> _questionsList.value = jsonAdapter.fromJson(offlineQuestions[3])?.results
+        }
+
+        _currentQuestionNum.value =0
     }
 
     @AssistedFactory

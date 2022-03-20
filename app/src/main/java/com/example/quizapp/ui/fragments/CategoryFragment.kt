@@ -53,5 +53,4 @@ class CategoryFragment : Fragment() {
         )
         findNavController().navigate(action)
     }
-
 }
