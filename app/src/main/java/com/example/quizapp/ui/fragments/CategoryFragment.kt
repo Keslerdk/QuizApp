@@ -12,7 +12,9 @@ import com.example.quizapp.R
 import com.example.quizapp.adapters.CategoryListAdapter
 import com.example.quizapp.databinding.FragmentCategoryBinding
 import com.example.quizapp.ui.viewmodels.CategoryViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class CategoryFragment : Fragment() {
 
     private var _binding: FragmentCategoryBinding? = null

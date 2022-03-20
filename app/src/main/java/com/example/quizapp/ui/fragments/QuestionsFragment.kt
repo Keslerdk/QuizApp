@@ -2,13 +2,11 @@ package com.example.quizapp.ui.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.core.content.ContentProviderCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
@@ -17,17 +15,22 @@ import com.example.quizapp.R
 import com.example.quizapp.adapters.AnswerListAdapter
 import com.example.quizapp.databinding.FinalDialogBinding
 import com.example.quizapp.databinding.FragmentQuestionsBinding
-import com.example.quizapp.ui.viewmodels.QuestionViewModelFactory
 import com.example.quizapp.ui.viewmodels.QuestionsViewModel
 import com.google.android.material.bottomsheet.BottomSheetBehavior
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class QuestionsFragment : Fragment() {
     private var _binding: FragmentQuestionsBinding? = null
     private val binding get() = _binding!!
 
+    @Inject
+    lateinit var viewModelAssistedFactory: QuestionsViewModel.Factory
+
     private val args: QuestionsFragmentArgs by navArgs()
-    private val viewModel: QuestionsViewModel by viewModels {
-        QuestionViewModelFactory(args.categoryId)
+    private val viewModel: QuestionsViewModel by viewModels{
+        QuestionsViewModel.provideFactory(viewModelAssistedFactory, args.categoryId)
     }
 
     private lateinit var bottomSheetBehavior: BottomSheetBehavior<ConstraintLayout>

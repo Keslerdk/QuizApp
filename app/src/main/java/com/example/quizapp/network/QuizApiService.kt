@@ -11,15 +11,6 @@ import retrofit2.http.Query
 
 const val BASE_URL = "https://opentdb.com"
 
-private val moshi = Moshi.Builder()
-    .add(KotlinJsonAdapterFactory())
-    .build()
-
-private val retrofit = Retrofit.Builder()
-    .addConverterFactory(MoshiConverterFactory.create(moshi))
-    .baseUrl(BASE_URL)
-    .build()
-
 interface QuizApiService {
 
     @GET("api_category.php")
@@ -30,11 +21,5 @@ interface QuizApiService {
         @Query("amount") amount: Int = 5,
         @Query("category") categoryId: Int
         ): Questions
-}
-
-object QuizApi {
-    val retrofitService: QuizApiService by lazy {
-        retrofit.create(QuizApiService::class.java)
-    }
 }
 

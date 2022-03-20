@@ -6,20 +6,23 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.quizapp.network.QuizApi
 import com.example.quizapp.network.model.TriviaCategory
+import com.example.quizapp.repositories.MainRepo
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 enum class Status {
     LOADING, DONE, ERROR
 }
 
-class CategoryViewModel : ViewModel() {
+@HiltViewModel
+class CategoryViewModel @Inject constructor(private val mainRepo: MainRepo) : ViewModel() {
     private val _categories = MutableLiveData<List<TriviaCategory>>()
     val categories: LiveData<List<TriviaCategory>> get() = _categories
 
     private val _status = MutableLiveData<Status>()
-    val status : LiveData<Status> get() = _status
+    val status: LiveData<Status> get() = _status
 
     init {
         getCategories()
@@ -29,7 +32,7 @@ class CategoryViewModel : ViewModel() {
         viewModelScope.launch {
             _status.value = Status.LOADING
             try {
-                _categories.value = QuizApi.retrofitService.getCategories().trivia_categories
+                _categories.value = mainRepo.getCategories().trivia_categories
                 _status.value = Status.DONE
                 Log.d(TAG, "getCategories: ${categories.value}")
             } catch (e: Exception) {

@@ -5,12 +5,16 @@ import android.os.Build
 import android.text.Html
 import android.util.Log
 import androidx.lifecycle.*
-import com.example.quizapp.network.QuizApi
 import com.example.quizapp.network.model.Result
+import com.example.quizapp.repositories.MainRepo
+import dagger.assisted.Assisted
+import dagger.assisted.AssistedFactory
+import dagger.assisted.AssistedInject
 import kotlinx.coroutines.launch
 
-class QuestionsViewModel(
-    private val categoryId: Int
+class QuestionsViewModel @AssistedInject constructor(
+    @Assisted private val categoryId: Int,
+    private val mainRepo: MainRepo
 ) : ViewModel() {
 
     private val _questionsList = MutableLiveData<List<Result>>()
@@ -27,7 +31,7 @@ class QuestionsViewModel(
         }
 
     private val _status = MutableLiveData<Status>()
-    val status : LiveData<Status> get() = _status
+    val status: LiveData<Status> get() = _status
 
     private var _chosenAnswer = ""
 
@@ -44,7 +48,7 @@ class QuestionsViewModel(
         viewModelScope.launch {
             try {
                 _questionsList.value =
-                    QuizApi.retrofitService.getQuestionsList(categoryId = categoryId).results
+                    mainRepo.getQuestionsList(categoryId = categoryId).results
 
                 _currentQuestionNum.value = 0
                 _status.value = Status.DONE
@@ -91,8 +95,8 @@ class QuestionsViewModel(
     }
 
     fun setNextQuestion() {
-            _currentQuestionNum.value =
-                _currentQuestionNum.value!! + 1
+        _currentQuestionNum.value =
+            _currentQuestionNum.value!! + 1
     }
 
     private fun convertFromHtml(str: String): String {
@@ -102,14 +106,21 @@ class QuestionsViewModel(
             Html.fromHtml(str).toString()
         }
     }
-}
 
-class QuestionViewModelFactory(private val categoryId: Int) : ViewModelProvider.Factory {
-    override fun <T : ViewModel?> create(modelClass: Class<T>): T {
-        if (modelClass.isAssignableFrom(QuestionsViewModel::class.java)) {
-            return QuestionsViewModel(categoryId) as T
-        }
-        throw IllegalArgumentException("Unknown ViewModel class")
+    @AssistedFactory
+    interface Factory {
+        fun create(categoryId: Int): QuestionsViewModel
     }
 
+    @Suppress("UNCHECKED_CAST")
+    companion object {
+        fun provideFactory(
+            assistedFactory: Factory,
+            categoryId: Int
+        ): ViewModelProvider.Factory = object : ViewModelProvider.Factory {
+            override fun <T : ViewModel?> create(modelClass: Class<T>): T {
+                return assistedFactory.create(categoryId) as T
+            }
+        }
+    }
 }
