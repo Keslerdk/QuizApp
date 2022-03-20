@@ -11,8 +11,7 @@
         <action
             android:id="@+id/action_categoryFragment_to_questionsFragment"
             app:destination="@id/questionsFragment"
-            app:popUpTo="@id/categoryFragment"
-            app:popUpToInclusive="true" />
+            app:popUpTo="@id/categoryFragment" />
     </fragment>
     <fragment
         android:id="@+id/questionsFragment"

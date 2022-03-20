@@ -26,6 +26,9 @@ class QuestionsViewModel(
             } ?: return null
         }
 
+    private val _status = MutableLiveData<Status>()
+    val status : LiveData<Status> get() = _status
+
     private var _chosenAnswer = ""
 
     private var _score = 0
@@ -37,15 +40,18 @@ class QuestionsViewModel(
     }
 
     private fun getQuestionsList() {
+        _status.value = Status.LOADING
         viewModelScope.launch {
             try {
                 _questionsList.value =
                     QuizApi.retrofitService.getQuestionsList(categoryId = categoryId).results
 
                 _currentQuestionNum.value = 0
+                _status.value = Status.DONE
                 Log.d(TAG, "getQuestionsList: ${questionList.value}")
 
             } catch (e: Exception) {
+                _status.value = Status.ERROR
                 Log.d(TAG, "getQuestionsList: $e")
             }
 

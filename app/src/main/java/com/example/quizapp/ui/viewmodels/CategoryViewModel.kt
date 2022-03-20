@@ -10,9 +10,16 @@ import com.example.quizapp.network.QuizApi
 import com.example.quizapp.network.model.TriviaCategory
 import kotlinx.coroutines.launch
 
+enum class Status {
+    LOADING, DONE, ERROR
+}
+
 class CategoryViewModel : ViewModel() {
     private val _categories = MutableLiveData<List<TriviaCategory>>()
     val categories: LiveData<List<TriviaCategory>> get() = _categories
+
+    private val _status = MutableLiveData<Status>()
+    val status : LiveData<Status> get() = _status
 
     init {
         getCategories()
@@ -20,10 +27,13 @@ class CategoryViewModel : ViewModel() {
 
     private fun getCategories() {
         viewModelScope.launch {
+            _status.value = Status.LOADING
             try {
                 _categories.value = QuizApi.retrofitService.getCategories().trivia_categories
+                _status.value = Status.DONE
                 Log.d(TAG, "getCategories: ${categories.value}")
             } catch (e: Exception) {
+                _status.value = Status.ERROR
                 Log.d(TAG, "getCategories: $e")
             }
         }

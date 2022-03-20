@@ -1,13 +1,14 @@
 package com.example.quizapp.ui.fragments
 
-import android.content.DialogInterface
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.content.ContentProviderCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
@@ -37,7 +38,10 @@ class QuestionsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentQuestionsBinding.inflate(inflater, container, false)
+
+        binding.lifecycleOwner = this
         binding.fragment = this
+        binding.viewModel = viewModel
         return binding.root
     }
 
@@ -50,11 +54,13 @@ class QuestionsFragment : Fragment() {
         bottomSheetBehavior.state = BottomSheetBehavior.STATE_HIDDEN
 
         val adapter = AnswerListAdapter { answer ->
+            binding.button.isEnabled = true
             viewModel.setChosenAnswer(answer)
         }
         binding.answerList.adapter = adapter
 
         binding.included.nextBtn.setOnClickListener {
+            binding.button.isEnabled = false
             adapter.resetSelectedIndex()
             navigateToNextQuestion()
         }
@@ -89,20 +95,25 @@ class QuestionsFragment : Fragment() {
         if (viewModel.currentQuestionNum.value != 4) {
             viewModel.setNextQuestion()
         } else {
-            showDialog()
+            showFinalDialog()
         }
 
         bottomSheetBehavior.isHideable = true
         bottomSheetBehavior.state = BottomSheetBehavior.STATE_HIDDEN
     }
 
-    private fun showDialog() {
+    private fun showFinalDialog() {
         val binding = FinalDialogBinding.inflate(layoutInflater)
         binding.score.text = getString(R.string.question_num, viewModel.score)
-        binding.restart.setOnClickListener { findNavController().navigateUp() }
         val messageBoxBuilder = AlertDialog.Builder(requireContext())
             .setView(binding.root)
             .setCancelable(false)
+            .create()
+
+        binding.restart.setOnClickListener {
+            messageBoxBuilder.dismiss()
+            findNavController().popBackStack()
+        }
 
         messageBoxBuilder.show()
     }
