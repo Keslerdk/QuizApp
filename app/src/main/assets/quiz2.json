@@ -1,0 +1,65 @@
+{
+  "response_code": 0,
+  "results": [
+    {
+      "category": "Entertainment: Books",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Which of the following is the world&#039;s best-selling book?",
+      "correct_answer": "The Lord of the Rings",
+      "incorrect_answers": [
+        "The Little Prince",
+        "Harry Potter and the Philosopher&#039;s Stone",
+        "The Da Vinci Code"
+      ]
+    },
+    {
+      "category": "Entertainment: Books",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "In the &quot;The Hobbit&quot;, who kills Smaug?",
+      "correct_answer": "Bard",
+      "incorrect_answers": [
+        "Bilbo Baggins",
+        "Gandalf the Grey",
+        "Frodo"
+      ]
+    },
+    {
+      "category": "Entertainment: Books",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Under what pseudonym did Stephen King publish five novels between 1977 and 1984?",
+      "correct_answer": "Richard Bachman",
+      "incorrect_answers": [
+        "J. D. Robb",
+        "Mark Twain",
+        "Lewis Carroll"
+      ]
+    },
+    {
+      "category": "Entertainment: Books",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "What is the name of the protagonist of J.D. Salinger&#039;s novel Catcher in the Rye?",
+      "correct_answer": "Holden Caulfield",
+      "incorrect_answers": [
+        "Fletcher Christian",
+        "Jay Gatsby",
+        "Randall Flagg"
+      ]
+    },
+    {
+      "category": "Entertainment: Books",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "What is the name of Eragon&#039;s dragon in &quot;Eragon&quot;?",
+      "correct_answer": "Saphira",
+      "incorrect_answers": [
+        "Glaedr",
+        "Thorn",
+        "Arya"
+      ]
+    }
+  ]
+}
