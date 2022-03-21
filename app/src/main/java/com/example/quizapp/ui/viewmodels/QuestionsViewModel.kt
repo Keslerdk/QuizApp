@@ -124,8 +124,8 @@ class QuestionsViewModel @AssistedInject constructor(
         val jsonAdapter : JsonAdapter<Questions> = moshi.adapter(Questions::class.java)
         when (categoryId) {
             11 -> _questionsList.value = jsonAdapter.fromJson(offlineQuestions[0])?.results
-            10 -> _questionsList.value = jsonAdapter.fromJson(offlineQuestions[2])?.results
-            9 -> _questionsList.value = jsonAdapter.fromJson(offlineQuestions[3])?.results
+            10 -> _questionsList.value = jsonAdapter.fromJson(offlineQuestions[1])?.results
+            9 -> _questionsList.value = jsonAdapter.fromJson(offlineQuestions[2])?.results
         }
 
         _currentQuestionNum.value =0

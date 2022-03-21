@@ -38,7 +38,7 @@
   <mainArtifact
       classOutputs="build/intermediates/javac/release/classes:build/tmp/kotlin-classes/release:build/tmp/kapt3/classes/release:build/kotlinToolingMetadata:build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/release/R.jar"
       applicationId="com.example.quizapp"
-      generatedSourceFolders="build/generated/source/navigation-args/release:build/generated/source/kapt/release:build/generated/ap_generated_sources/release/out:build/generated/aidl_source_output_dir/release/out:build/generated/source/buildConfig/release:build/generated/renderscript_source_output_dir/release/out:build/generated/data_binding_base_class_source_out/release/out"
+      generatedSourceFolders="build/generated/source/navigation-args/release:build/generated/source/kapt/release:build/generated/source/kapt/release:build/generated/ap_generated_sources/release/out:build/generated/aidl_source_output_dir/release/out:build/generated/source/buildConfig/release:build/generated/renderscript_source_output_dir/release/out:build/generated/data_binding_base_class_source_out/release/out"
       generatedResourceFolders="build/generated/res/rs/release:build/generated/res/resValues/release">
   </mainArtifact>
   <testArtifact>
