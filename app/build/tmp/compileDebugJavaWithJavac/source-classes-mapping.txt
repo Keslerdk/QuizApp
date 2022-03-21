@@ -1,0 +1,159 @@
+com/example/quizapp/ui/viewmodels/CategoryViewModel_HiltModules_KeyModule_ProvideFactory.java
+ com.example.quizapp.ui.viewmodels.CategoryViewModel_HiltModules_KeyModule_ProvideFactory
+ com.example.quizapp.ui.viewmodels.CategoryViewModel_HiltModules_KeyModule_ProvideFactory$InstanceHolder
+com/example/quizapp/DataBindingTriggerClass.java
+ com.example.quizapp.DataBindingTriggerClass
+com/example/quizapp/DataBinderMapperImpl.java
+ com.example.quizapp.DataBinderMapperImpl
+ com.example.quizapp.DataBinderMapperImpl$InnerBrLookup
+ com.example.quizapp.DataBinderMapperImpl$InnerLayoutIdLookup
+com/example/quizapp/di/AppModule_ProvideOfflineQuestionsFactory.java
+ com.example.quizapp.di.AppModule_ProvideOfflineQuestionsFactory
+com/example/quizapp/databinding/CategoryItemBindingImpl.java
+ com.example.quizapp.databinding.CategoryItemBindingImpl
+com/example/quizapp/ui/viewmodels/QuestionsViewModel_MembersInjector.java
+ com.example.quizapp.ui.viewmodels.QuestionsViewModel_MembersInjector
+androidx/databinding/DataBinderMapperImpl.java
+ androidx.databinding.DataBinderMapperImpl
+androidx/databinding/library/baseAdapters/BR.java
+ androidx.databinding.library.baseAdapters.BR
+com/example/quizapp/databinding/AnswerItemBindingImpl.java
+ com.example.quizapp.databinding.AnswerItemBindingImpl
+com/example/quizapp/DaggerMainApplication_HiltComponents_SingletonC.java
+ com.example.quizapp.DaggerMainApplication_HiltComponents_SingletonC
+ com.example.quizapp.DaggerMainApplication_HiltComponents_SingletonC$1
+ com.example.quizapp.DaggerMainApplication_HiltComponents_SingletonC$ActivityCBuilder
+ com.example.quizapp.DaggerMainApplication_HiltComponents_SingletonC$ActivityCImpl
+ com.example.quizapp.DaggerMainApplication_HiltComponents_SingletonC$ActivityRetainedCBuilder
+ com.example.quizapp.DaggerMainApplication_HiltComponents_SingletonC$ActivityRetainedCImpl
+ com.example.quizapp.DaggerMainApplication_HiltComponents_SingletonC$ActivityRetainedCImpl$SwitchingProvider
+ com.example.quizapp.DaggerMainApplication_HiltComponents_SingletonC$Builder
+ com.example.quizapp.DaggerMainApplication_HiltComponents_SingletonC$FragmentCBuilder
+ com.example.quizapp.DaggerMainApplication_HiltComponents_SingletonC$FragmentCImpl
+ com.example.quizapp.DaggerMainApplication_HiltComponents_SingletonC$FragmentCImpl$1
+ com.example.quizapp.DaggerMainApplication_HiltComponents_SingletonC$ServiceCBuilder
+ com.example.quizapp.DaggerMainApplication_HiltComponents_SingletonC$ServiceCImpl
+ com.example.quizapp.DaggerMainApplication_HiltComponents_SingletonC$SwitchingProvider
+ com.example.quizapp.DaggerMainApplication_HiltComponents_SingletonC$ViewCBuilder
+ com.example.quizapp.DaggerMainApplication_HiltComponents_SingletonC$ViewCImpl
+ com.example.quizapp.DaggerMainApplication_HiltComponents_SingletonC$ViewModelCBuilder
+ com.example.quizapp.DaggerMainApplication_HiltComponents_SingletonC$ViewModelCImpl
+ com.example.quizapp.DaggerMainApplication_HiltComponents_SingletonC$ViewModelCImpl$SwitchingProvider
+ com.example.quizapp.DaggerMainApplication_HiltComponents_SingletonC$ViewWithFragmentCBuilder
+ com.example.quizapp.DaggerMainApplication_HiltComponents_SingletonC$ViewWithFragmentCImpl
+com/example/quizapp/di/AppModule_ProvideMoshiFactory.java
+ com.example.quizapp.di.AppModule_ProvideMoshiFactory
+ com.example.quizapp.di.AppModule_ProvideMoshiFactory$InstanceHolder
+com/example/quizapp/databinding/FragmentQuestionsBindingImpl.java
+ com.example.quizapp.databinding.FragmentQuestionsBindingImpl
+com/example/quizapp/databinding/FinalDialogBindingImpl.java
+ com.example.quizapp.databinding.FinalDialogBindingImpl
+com/example/quizapp/di/AppModule_ProvideOfflineCategoriesFactory.java
+ com.example.quizapp.di.AppModule_ProvideOfflineCategoriesFactory
+com/example/quizapp/ui/viewmodels/QuestionsViewModel_Factory_Impl.java
+ com.example.quizapp.ui.viewmodels.QuestionsViewModel_Factory_Impl
+com/example/quizapp/databinding/FragmentQuestionsBinding.java
+ com.example.quizapp.databinding.FragmentQuestionsBinding
+com/example/quizapp/ui/viewmodels/CategoryViewModel_HiltModules.java
+ com.example.quizapp.ui.viewmodels.CategoryViewModel_HiltModules
+ com.example.quizapp.ui.viewmodels.CategoryViewModel_HiltModules$BindsModule
+ com.example.quizapp.ui.viewmodels.CategoryViewModel_HiltModules$KeyModule
+com/example/quizapp/databinding/BottomSheetBinding.java
+ com.example.quizapp.databinding.BottomSheetBinding
+com/example/quizapp/databinding/BottomSheetBindingImpl.java
+ com.example.quizapp.databinding.BottomSheetBindingImpl
+com/example/quizapp/repositories/MainRepo_Factory.java
+ com.example.quizapp.repositories.MainRepo_Factory
+com/example/quizapp/ui/fragments/Hilt_QuestionsFragment.java
+ com.example.quizapp.ui.fragments.Hilt_QuestionsFragment
+hilt_aggregated_deps/_com_example_quizapp_ui_fragments_QuestionsFragment_GeneratedInjector.java
+ hilt_aggregated_deps._com_example_quizapp_ui_fragments_QuestionsFragment_GeneratedInjector
+dagger/hilt/internal/aggregatedroot/codegen/_com_example_quizapp_MainApplication.java
+ dagger.hilt.internal.aggregatedroot.codegen._com_example_quizapp_MainApplication
+com/example/quizapp/databinding/FinalDialogBinding.java
+ com.example.quizapp.databinding.FinalDialogBinding
+hilt_aggregated_deps/_com_example_quizapp_ui_fragments_CategoryFragment_GeneratedInjector.java
+ hilt_aggregated_deps._com_example_quizapp_ui_fragments_CategoryFragment_GeneratedInjector
+com/example/quizapp/di/AppModule_ProvideRetrofitFactory.java
+ com.example.quizapp.di.AppModule_ProvideRetrofitFactory
+com/example/quizapp/di/AppModule_ProvideQuizApiFactory.java
+ com.example.quizapp.di.AppModule_ProvideQuizApiFactory
+com/example/quizapp/ui/fragments/QuestionsFragment_GeneratedInjector.java
+ com.example.quizapp.ui.fragments.QuestionsFragment_GeneratedInjector
+hilt_aggregated_deps/_com_example_quizapp_di_AppModule.java
+ hilt_aggregated_deps._com_example_quizapp_di_AppModule
+com/example/quizapp/ui/Hilt_MainActivity.java
+ com.example.quizapp.ui.Hilt_MainActivity
+ com.example.quizapp.ui.Hilt_MainActivity$1
+hilt_aggregated_deps/_com_example_quizapp_MainApplication_GeneratedInjector.java
+ hilt_aggregated_deps._com_example_quizapp_MainApplication_GeneratedInjector
+com/example/quizapp/databinding/FragmentCategoryBindingImpl.java
+ com.example.quizapp.databinding.FragmentCategoryBindingImpl
+hilt_aggregated_deps/_com_example_quizapp_ui_viewmodels_CategoryViewModel_HiltModules_BindsModule.java
+ hilt_aggregated_deps._com_example_quizapp_ui_viewmodels_CategoryViewModel_HiltModules_BindsModule
+hilt_aggregated_deps/_com_example_quizapp_ui_MainActivity_GeneratedInjector.java
+ hilt_aggregated_deps._com_example_quizapp_ui_MainActivity_GeneratedInjector
+com/example/quizapp/ui/fragments/Hilt_CategoryFragment.java
+ com.example.quizapp.ui.fragments.Hilt_CategoryFragment
+com/example/quizapp/MainApplication_HiltComponents.java
+ com.example.quizapp.MainApplication_HiltComponents
+ com.example.quizapp.MainApplication_HiltComponents$ActivityC
+ com.example.quizapp.MainApplication_HiltComponents$ActivityC$Builder
+ com.example.quizapp.MainApplication_HiltComponents$ActivityCBuilderModule
+ com.example.quizapp.MainApplication_HiltComponents$ActivityRetainedC
+ com.example.quizapp.MainApplication_HiltComponents$ActivityRetainedC$Builder
+ com.example.quizapp.MainApplication_HiltComponents$ActivityRetainedCBuilderModule
+ com.example.quizapp.MainApplication_HiltComponents$FragmentC
+ com.example.quizapp.MainApplication_HiltComponents$FragmentC$Builder
+ com.example.quizapp.MainApplication_HiltComponents$FragmentCBuilderModule
+ com.example.quizapp.MainApplication_HiltComponents$ServiceC
+ com.example.quizapp.MainApplication_HiltComponents$ServiceC$Builder
+ com.example.quizapp.MainApplication_HiltComponents$ServiceCBuilderModule
+ com.example.quizapp.MainApplication_HiltComponents$SingletonC
+ com.example.quizapp.MainApplication_HiltComponents$ViewC
+ com.example.quizapp.MainApplication_HiltComponents$ViewC$Builder
+ com.example.quizapp.MainApplication_HiltComponents$ViewCBuilderModule
+ com.example.quizapp.MainApplication_HiltComponents$ViewModelC
+ com.example.quizapp.MainApplication_HiltComponents$ViewModelC$Builder
+ com.example.quizapp.MainApplication_HiltComponents$ViewModelCBuilderModule
+ com.example.quizapp.MainApplication_HiltComponents$ViewWithFragmentC
+ com.example.quizapp.MainApplication_HiltComponents$ViewWithFragmentC$Builder
+ com.example.quizapp.MainApplication_HiltComponents$ViewWithFragmentCBuilderModule
+com/example/quizapp/BR.java
+ com.example.quizapp.BR
+com/example/quizapp/ui/viewmodels/CategoryViewModel_MembersInjector.java
+ com.example.quizapp.ui.viewmodels.CategoryViewModel_MembersInjector
+com/example/quizapp/databinding/AnswerItemBinding.java
+ com.example.quizapp.databinding.AnswerItemBinding
+com/example/quizapp/BuildConfig.java
+ com.example.quizapp.BuildConfig
+com/example/quizapp/ui/viewmodels/QuestionsViewModel_Factory.java
+ com.example.quizapp.ui.viewmodels.QuestionsViewModel_Factory
+com/example/quizapp/MainApplication_ComponentTreeDeps.java
+ com.example.quizapp.MainApplication_ComponentTreeDeps
+com/example/quizapp/Hilt_MainApplication.java
+ com.example.quizapp.Hilt_MainApplication
+ com.example.quizapp.Hilt_MainApplication$1
+com/example/quizapp/ui/fragments/CategoryFragment_GeneratedInjector.java
+ com.example.quizapp.ui.fragments.CategoryFragment_GeneratedInjector
+dagger/hilt/internal/processedrootsentinel/codegen/_com_example_quizapp_MainApplication.java
+ dagger.hilt.internal.processedrootsentinel.codegen._com_example_quizapp_MainApplication
+com/example/quizapp/MainApplication_GeneratedInjector.java
+ com.example.quizapp.MainApplication_GeneratedInjector
+hilt_aggregated_deps/_com_example_quizapp_ui_viewmodels_CategoryViewModel_HiltModules_KeyModule.java
+ hilt_aggregated_deps._com_example_quizapp_ui_viewmodels_CategoryViewModel_HiltModules_KeyModule
+com/example/quizapp/databinding/FragmentCategoryBinding.java
+ com.example.quizapp.databinding.FragmentCategoryBinding
+com/example/quizapp/ui/fragments/QuestionsFragment_MembersInjector.java
+ com.example.quizapp.ui.fragments.QuestionsFragment_MembersInjector
+com/example/quizapp/databinding/CategoryItemBinding.java
+ com.example.quizapp.databinding.CategoryItemBinding
+com/example/quizapp/generated/callback/OnClickListener.java
+ com.example.quizapp.generated.callback.OnClickListener
+ com.example.quizapp.generated.callback.OnClickListener$Listener
+com/example/quizapp/ui/MainActivity_GeneratedInjector.java
+ com.example.quizapp.ui.MainActivity_GeneratedInjector
+com/example/quizapp/ui/viewmodels/CategoryViewModel_Factory.java
+ com.example.quizapp.ui.viewmodels.CategoryViewModel_Factory
+androidx/databinding/DataBindingComponent.java
+ androidx.databinding.DataBindingComponent

@@ -1,0 +1,170 @@
+[
+    {
+        "merged": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/build/intermediates/merged_res/release/layout_activity_main.xml.flat",
+        "source": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/build/intermediates/merged_res/release/mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/build/intermediates/merged_res/release/drawable_card_background_4.xml.flat",
+        "source": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/src/main/res/drawable/card_background_4.xml"
+    },
+    {
+        "merged": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/build/intermediates/merged_res/release/mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/build/intermediates/merged_res/release/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/build/intermediates/merged_res/release/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/build/intermediates/merged_res/release/layout_category_item.xml.flat",
+        "source": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/src/main/res/layout/category_item.xml"
+    },
+    {
+        "merged": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/build/intermediates/merged_res/release/drawable_card_background_2.xml.flat",
+        "source": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/src/main/res/drawable/card_background_2.xml"
+    },
+    {
+        "merged": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/build/intermediates/merged_res/release/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/build/intermediates/merged_res/release/drawable_ic_launcher_background.xml.flat",
+        "source": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/src/main/res/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/build/intermediates/merged_res/release/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/build/intermediates/merged_res/release/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/build/intermediates/merged_res/release/drawable_answer_background.xml.flat",
+        "source": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/src/main/res/drawable/answer_background.xml"
+    },
+    {
+        "merged": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/build/intermediates/merged_res/release/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/build/intermediates/merged_res/release/navigation_nav_graph.xml.flat",
+        "source": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/src/main/res/navigation/nav_graph.xml"
+    },
+    {
+        "merged": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/build/intermediates/merged_res/release/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/build/intermediates/merged_res/release/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/build/intermediates/merged_res/release/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/build/intermediates/merged_res/release/color_answer_text_color.xml.flat",
+        "source": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/src/main/res/color/answer_text_color.xml"
+    },
+    {
+        "merged": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/build/intermediates/merged_res/release/drawable_ic_spot_2.xml.flat",
+        "source": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/src/main/res/drawable/ic_spot_2.xml"
+    },
+    {
+        "merged": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/build/intermediates/merged_res/release/layout_answer_item.xml.flat",
+        "source": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/src/main/res/layout/answer_item.xml"
+    },
+    {
+        "merged": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/build/intermediates/merged_res/release/layout_fragment_category.xml.flat",
+        "source": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/src/main/res/layout/fragment_category.xml"
+    },
+    {
+        "merged": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/build/intermediates/merged_res/release/drawable_ic_congratulations.xml.flat",
+        "source": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/src/main/res/drawable/ic_congratulations.xml"
+    },
+    {
+        "merged": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/build/intermediates/merged_res/release/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/build/intermediates/merged_res/release/layout_fragment_questions.xml.flat",
+        "source": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/src/main/res/layout/fragment_questions.xml"
+    },
+    {
+        "merged": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/build/intermediates/merged_res/release/drawable_card_background_3.xml.flat",
+        "source": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/src/main/res/drawable/card_background_3.xml"
+    },
+    {
+        "merged": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/build/intermediates/merged_res/release/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/build/intermediates/merged_res/release/layout_bottom_sheet.xml.flat",
+        "source": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/src/main/res/layout/bottom_sheet.xml"
+    },
+    {
+        "merged": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/build/intermediates/merged_res/release/drawable_ic_spot_4.xml.flat",
+        "source": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/src/main/res/drawable/ic_spot_4.xml"
+    },
+    {
+        "merged": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/build/intermediates/merged_res/release/font_montserrat_bold.ttf.flat",
+        "source": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/src/main/res/font/montserrat_bold.ttf"
+    },
+    {
+        "merged": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/build/intermediates/merged_res/release/font_lato.ttf.flat",
+        "source": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/src/main/res/font/lato.ttf"
+    },
+    {
+        "merged": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/build/intermediates/merged_res/release/mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/build/intermediates/merged_res/release/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/build/generated/res/pngs/release/drawable-anydpi-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/build/intermediates/merged_res/release/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/build/intermediates/merged_res/release/layout_final_dialog.xml.flat",
+        "source": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/src/main/res/layout/final_dialog.xml"
+    },
+    {
+        "merged": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/build/intermediates/merged_res/release/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/build/intermediates/merged_res/release/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/build/intermediates/merged_res/release/drawable_card_background_1.xml.flat",
+        "source": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/src/main/res/drawable/card_background_1.xml"
+    },
+    {
+        "merged": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/build/intermediates/merged_res/release/drawable_ic_spot_1.xml.flat",
+        "source": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/src/main/res/drawable/ic_spot_1.xml"
+    },
+    {
+        "merged": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/build/intermediates/merged_res/release/drawable_ic_spot_3.xml.flat",
+        "source": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/src/main/res/drawable/ic_spot_3.xml"
+    },
+    {
+        "merged": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/build/intermediates/merged_res/release/drawable_bottom_sheet_background.xml.flat",
+        "source": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/src/main/res/drawable/bottom_sheet_background.xml"
+    },
+    {
+        "merged": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/build/intermediates/merged_res/release/drawable_button_shape.xml.flat",
+        "source": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/src/main/res/drawable/button_shape.xml"
+    }
+]

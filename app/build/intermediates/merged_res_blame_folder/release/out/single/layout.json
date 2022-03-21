@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/build/intermediates/incremental/mergeReleaseResources/stripped.dir/layout/answer_item.xml",
+        "source": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/src/main/res/layout/answer_item.xml"
+    },
+    {
+        "merged": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/build/intermediates/incremental/mergeReleaseResources/stripped.dir/layout/final_dialog.xml",
+        "source": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/src/main/res/layout/final_dialog.xml"
+    },
+    {
+        "merged": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/build/intermediates/incremental/mergeReleaseResources/stripped.dir/layout/category_item.xml",
+        "source": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/src/main/res/layout/category_item.xml"
+    },
+    {
+        "merged": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/build/intermediates/incremental/mergeReleaseResources/stripped.dir/layout/bottom_sheet.xml",
+        "source": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/src/main/res/layout/bottom_sheet.xml"
+    },
+    {
+        "merged": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/build/intermediates/incremental/mergeReleaseResources/stripped.dir/layout/fragment_category.xml",
+        "source": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/src/main/res/layout/fragment_category.xml"
+    },
+    {
+        "merged": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/build/intermediates/incremental/mergeReleaseResources/stripped.dir/layout/fragment_questions.xml",
+        "source": "/Users/kesler/AndroidStudioProjects/android projects/QuizApp/app/src/main/res/layout/fragment_questions.xml"
+    }
+]

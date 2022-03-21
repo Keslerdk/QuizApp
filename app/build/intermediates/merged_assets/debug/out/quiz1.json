@@ -1,0 +1,65 @@
+{
+  "response_code": 0,
+  "results": [
+    {
+      "category": "Entertainment: Film",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Daniel Radcliffe became a global star in the film industry due to his performance in which film franchise?",
+      "correct_answer": "Harry Potter",
+      "incorrect_answers": [
+        "Ted",
+        "Spy Kids",
+        "Pirates of the Caribbean "
+      ]
+    },
+    {
+      "category": "Entertainment: Film",
+      "type": "multiple",
+      "difficulty": "hard",
+      "question": "Which was the first of Alfred Hitchcock&#039;s movies to be filmed in colour?",
+      "correct_answer": "Rope",
+      "incorrect_answers": [
+        "Psycho",
+        "Vertigo",
+        "Rebecca"
+      ]
+    },
+    {
+      "category": "Entertainment: Film",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "The 2002 film &quot;28 Days Later&quot; is mainly set in which European country?",
+      "correct_answer": "United Kingdom",
+      "incorrect_answers": [
+        "France",
+        "Italy",
+        "Germany"
+      ]
+    },
+    {
+      "category": "Entertainment: Film",
+      "type": "multiple",
+      "difficulty": "hard",
+      "question": "Which actress portrayed Dr. Grace Augustine in the James Cameron movie &quot;Avatar&quot;?",
+      "correct_answer": "Sigourney Weaver",
+      "incorrect_answers": [
+        "Jessica Chastain",
+        "Melissa Beckett",
+        "Alyssa Monroe "
+      ]
+    },
+    {
+      "category": "Entertainment: Film",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Who plays Jack Burton in the movie &quot;Big Trouble in Little China?&quot;",
+      "correct_answer": "Kurt Russell",
+      "incorrect_answers": [
+        "Patrick Swayze",
+        "John Cusack",
+        "Harrison Ford"
+      ]
+    }
+  ]
+}
